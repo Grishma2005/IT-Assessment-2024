@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Grishma Adhikari - About Me</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: "Georgia", serif;
+        background-color: #f9f7f1;
+        color: #444032;
+      }
+      header,
+      footer {
+        background-color: #9b786f;
+        color: #f4ece6;
+        padding: 1rem 2rem;
+      }
+      nav {
+        max-width: 1150px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        gap: 1.3rem;
+      }
+      nav ul li a {
+        color: #f4ece6;
+        font-weight: 600;
+        text-decoration: none;
+      }
+      nav ul li a:hover,
+      nav ul li a:focus {
+        color: #d1b89d;
+        text-decoration: underline;
+      }
+      main {
+        max-width: 1150px;
+        margin: 2rem auto;
+        padding: 0 1rem;
+      }
+      h1 {
+        text-align: center;
+        margin-bottom: 1.5rem;
+        color: #6d4c41;
+      }
+      section.bio {
+        max-width: 700px;
+        margin: 0 auto 3rem auto;
+        line-height: 1.7;
+        font-size: 1.1rem;
+      }
+      section.table-section {
+        background: #e7dfd5;
+        padding: 1rem 2rem;
+        border-radius: 8px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        font-family: "Courier New", Courier, monospace;
+      }
+      th,
+      td {
+        border: 2px solid #9b786f;
+        padding: 10px 14px;
+        text-align: center;
+      }
+      th {
+        background-color: #9b786f;
+        color: #f4ece6;
+      }
+      td.nested-table-cell {
+        padding: 0;
+      }
+      /* Nested table */
+      table.nested {
+        width: 100%;
+        border: none;
+      }
+      table.nested th,
+      table.nested td {
+        border: 1px solid #7e665a;
+        padding: 6px 8px;
+        font-size: 0.9rem;
+      }
+      /* Footer */
+      footer {
+        font-size: 0.9rem;
+        text-align: center;
+      }
+      /* Secondary nav bottom */
+      .secondary-nav {
+        margin-top: 1rem;
+        text-align: center;
+      }
+      .secondary-nav a {
+        color: #9b786f;
+        font-size: 0.85rem;
+        text-decoration: none;
+        margin: 0 0.6rem;
+      }
+      .secondary-nav a:hover {
+        text-decoration: underline;
+      }
+      a {
+        color: #6d4c41;
+      }
+      a:visited {
+        color: #5a3f34;
+      }
+      a:hover {
+        color: #d1b89d;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div><strong>Grishma Adhikari</strong></div>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="about.html" aria-current="page">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1>About Me</h1>
+      <section class="bio" aria-label="Biography">
+        <p>
+          Hello! I’m Grishma Adhikari, a digital enthusiast with a love for
+          videography, photography, and travelling. I enjoy capturing nature with
+          my camera to create memories. This website is a glimpse
+          into my journey and passions.
+        </p>
+        <p>
+          When I’m not working on projects, you’ll find me exploring new places,
+          capturing moments through photography, or hiking in nature.
+        </p>
+      </section>
+
+      <section class="table-section" aria-label="Skills and Experience table">
+        <h2 style="text-align: center; margin-bottom: 1rem">Skills Overview</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Category</th>
+              <th>Description</th>
+              <th>Experience</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Travel Blog</td>
+              <td> Let's explore nature
+               
+              </td>
+              <td>4 years</td>
+            </tr>
+            <tr>
+              <td>Videogreaphy</td>
+              <td>Photoshop,After effect</td>
+              <td>3 years</td>
+            </tr>
+            <tr>
+              <td>Photography</td>
+              <td>Portraits, Landscape, Editing</td>
+              <td>5 years</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        © 2025 Grishma Adhikari | Email:
+        <a href="mailto:agrishma25@tbc.edu.np">agrishma25@tbc.edu.np</a>
+      </p>
+      <nav class="secondary-nav" aria-label="Secondary site navigation">
+        <a href="index.html">Home</a>| <a href="gallery.html">Gallery</a>|
+        <a href="about.html">About</a>| <a href="services.html">Services</a>|
+        <a href="contact.html">Contact</a>
+      </nav>
+    </footer>
+  </body>
+</html>

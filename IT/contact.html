@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Grishma Adhikari - Contact</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: "Verdana", Geneva, Tahoma, sans-serif;
+        background-color: #f4f4f9;
+        color: #222;
+      }
+      header,
+      footer {
+        background: #3a4750;
+        color: #e2e8f0;
+        padding: 1.3rem 2rem;
+      }
+      nav {
+        max-width: 1100px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      nav ul {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        gap: 1.3rem;
+      }
+      nav ul li a {
+        color: #e2e8f0;
+        font-weight: 600;
+        text-decoration: none;
+      }
+      nav ul li a:hover,
+      nav ul li a:focus {
+        color: #ffd600;
+        text-decoration: underline;
+      }
+      main {
+        max-width: 700px;
+        margin: 2rem auto;
+        padding: 0 1rem;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+        color: #2c3e50;
+        text-align: center;
+        margin-bottom: 1.5rem;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+      }
+      label {
+        font-weight: 600;
+        color: #34495e;
+      }
+      input[type="text"],
+      input[type="email"],
+      textarea {
+        padding: 0.6rem 0.8rem;
+        border: 2px solid #b0bec5;
+        border-radius: 4px;
+        font-size: 1rem;
+        resize: vertical;
+        transition: border-color 0.3s ease;
+      }
+      input[type="text"]:focus,
+      input[type="email"]:focus,
+      textarea:focus {
+        border-color: #3a4750;
+        outline: none;
+      }
+      textarea {
+        min-height: 120px;
+      }
+      button {
+        width: 140px;
+        align-self: center;
+        background-color: #3a4750;
+        color: white;
+        border: none;
+        padding: 0.7rem 1.3rem;
+        font-size: 1.1rem;
+        cursor: pointer;
+        border-radius: 6px;
+        transition: background-color 0.3s ease;
+      }
+      button:hover {
+        background-color: #53606f;
+      }
+      .error-message {
+        color: #d32f2f;
+        font-size: 0.9rem;
+      }
+      footer {
+        text-align: center;
+        font-size: 0.9rem;
+      }
+      /* Secondary nav bottom */
+      .secondary-nav {
+        margin-top: 1rem;
+      }
+      .secondary-nav a {
+        color: #3a4750;
+        font-size: 0.85rem;
+        text-decoration: none;
+        margin: 0 0.6rem;
+      }
+      .secondary-nav a:hover {
+        text-decoration: underline;
+      }
+      a {
+        color: #2c3e50;
+      }
+      a:visited {
+        color: #1f2d3d;
+      }
+      a:hover {
+        color: #ffd600;
+      }
+    </style>
+    <script>
+      function validateForm(event) {
+        event.preventDefault();
+        let valid = true;
+
+        // Clear previous error messages
+        const errors = document.querySelectorAll(".error-message");
+        errors.forEach((e) => (e.textContent = ""));
+
+        const nameInput = document.getElementById("name");
+        const emailInput = document.getElementById("email");
+        const messageInput = document.getElementById("message");
+
+        // Name validation: required and min 3 chars
+        if (!nameInput.value.trim()) {
+          setError("name-error", "Please enter your name.");
+          valid = false;
+        } else if (nameInput.value.trim().length < 3) {
+          setError("name-error", "Name must be at least 3 characters.");
+          valid = false;
+        }
+
+        // Email validation: required and simple pattern
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailInput.value.trim()) {
+          setError("email-error", "Please enter your email.");
+          valid = false;
+        } else if (!emailPattern.test(emailInput.value.trim())) {
+          setError("email-error", "Please enter a valid email address.");
+          valid = false;
+        }
+
+        // Message validation: required and min 10 chars
+        if (!messageInput.value.trim()) {
+          setError("message-error", "Please enter your message.");
+          valid = false;
+        } else if (messageInput.value.trim().length < 10) {
+          setError("message-error", "Message must be at least 10 characters.");
+          valid = false;
+        }
+
+        if (valid) {
+          alert(
+            "Thank you for your message, " +
+              nameInput.value.trim() +
+              "! We will get back to you shortly."
+          );
+          event.target.reset();
+        }
+      }
+
+      function setError(id, msg) {
+        document.getElementById(id).textContent = msg;
+      }
+    </script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div><strong>Grishma Adhikari</strong></div>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Contact Me</h1>
+      <form id="contactForm" onsubmit="validateForm(event)" novalidate>
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" placeholder="Your full name" />
+        <div class="error-message" id="name-error"></div>
+
+        <label for="email">Email Address:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="you@example.com"
+        />
+        <div class="error-message" id="email-error"></div>
+
+        <label for="message">Your Message:</label>
+        <textarea
+          id="message"
+          name="message"
+          placeholder="Write your message here..."
+        ></textarea>
+        <div class="error-message" id="message-error"></div>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </main>
+
+    <footer>
+      <p>
+        © 2025 Grishma Adhikari | Email:
+        <a href="mailto:agrishma25@tbc.edu.np">agrishma25@tbc.edu.np</a>
+      </p>
+      <nav class="secondary-nav" aria-label="Secondary site navigation">
+        <a href="index.html">Home</a>| <a href="gallery.html">Gallery</a>|
+        <a href="about.html">About</a>| <a href="services.html">Services</a>|
+        <a href="contact.html">Contact</a>
+      </nav>
+    </footer>
+  </body>
+</html>

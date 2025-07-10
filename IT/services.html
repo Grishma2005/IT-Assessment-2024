@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Grishma Adhikari - Services</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: "Trebuchet MS", Helvetica, sans-serif;
+        background: linear-gradient(135deg, #d8e2dc, #ffe5d9);
+        color: #423737;
+      }
+      header,
+      footer {
+        background-color: #58dfe4;
+        color: #fff8f0;
+        padding: 1rem 2rem;
+      }
+      nav {
+        max-width: 1100px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      nav ul {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        gap: 1.2rem;
+        list-style: none;
+      }
+      nav ul li a {
+        color: #fff8f0;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      nav ul li a:hover,
+      nav ul li a:focus {
+        color: #d1603d;
+        text-decoration: underline;
+      }
+      main {
+        max-width: 1100px;
+        margin: 2rem auto;
+        padding: 0 1rem;
+      }
+      h1 {
+        text-align: center;
+        margin-bottom: 2rem;
+        font-weight: 900;
+        color: #9d4edd;
+      }
+      .services-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        justify-content: center;
+      }
+      .service-card {
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 8px 12px rgba(157, 78, 221, 0.2);
+        width: 280px;
+        padding: 1.5rem 1.2rem;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .service-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 16px 24px rgba(157, 78, 221, 0.4);
+      }
+      .service-card h3 {
+        margin-top: 0;
+        color: #6a1b9a;
+        font-size: 1.3rem;
+      }
+      .service-card p {
+        color: #5e4b66;
+        line-height: 1.5;
+        font-size: 1rem;
+      }
+      footer {
+        text-align: center;
+        font-size: 0.9rem;
+      }
+      /* Secondary nav bottom */
+      .secondary-nav {
+        margin-top: 1rem;
+      }
+      .secondary-nav a {
+        color: hwb(170 31% 13%);
+        font-size: 0.85rem;
+        text-decoration: none;
+        margin: 0 0.6rem;
+      }
+      .secondary-nav a:hover {
+        text-decoration: underline;
+      }
+      a {
+        color: #9d4edd;
+      }
+      a:visited {
+        color: #732d91;
+      }
+      a:hover {
+        color: #d1603d;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div><strong>Grishma Adhikari</strong></div>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html" aria-current="page">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Services I Offer</h1>
+      <section class="services-container" aria-label="List of services">
+        <article class="service-card">
+          <h3>Travel guide</h3>
+          <p>
+           Let's explore nature together!
+  
+          </p>
+        </article>
+        <article class="service-card">
+          <h3>Videography</h3>
+          <p>
+           Capture your precious moments.
+          </p>
+        </article>
+        <article class="service-card">
+          <h3>Photography</h3>
+          <p>
+            Capturing beautiful moments, whether portraits, landscapes, or
+            events with professional quality.
+          </p>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        © 2025 Grishma Adhikari | Email:
+        <a href="mailto:agrishma25@tbc.edu.np">agrishma25@tbc.edu.np</a>
+      </p>
+      <nav class="secondary-nav" aria-label="Secondary site navigation">
+        <a href="index.html">Home</a>| <a href="gallery.html">Gallery</a>|
+        <a href="about.html">About</a>| <a href="services.html">Services</a>|
+        <a href="contact.html">Contact</a>
+      </nav>
+    </footer>
+  </body>
+</html>

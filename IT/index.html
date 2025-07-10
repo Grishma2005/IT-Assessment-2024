@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Grishma Adhikari - Welcome</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: #f0f8ff;
+        color: #222;
+      }
+      header,
+      footer {
+        background-color: #c4d9e6;
+        color: rgb(0, 0, 0);
+        padding: 1rem 2rem;
+      }
+      nav {
+        max-width: 1200px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      nav ul {
+        list-style: none;
+        display: flex;
+        gap: 1.2rem;
+        margin: 0;
+        padding: 0;
+      }
+      nav ul li a {
+        color: #04010c;
+        text-decoration: none;
+        font-weight: 600;
+        transition: color 0.3s ease;
+      }
+      nav ul li a:hover,
+      nav ul li a:focus {
+        color: #000000;
+      }
+      main {
+        max-width: 1200px;
+        margin: 2rem auto;
+        padding: 0 1rem;
+      }
+      /* Banner slider */
+      .slider {
+        position: relative;
+        overflow: hidden;
+        border-radius: 8px;
+        max-height: 400px;
+      }
+      .slides {
+        display: flex;
+        width:100%;
+        animation: slideAnimation 15s infinite;
+      }
+      .slides img {
+        width: 100%;
+        flex-shrink: 0;
+        object-fit: cover;
+        height: 400px;
+      }
+      @keyframes slideAnimation {
+        0%,
+        33% {
+          transform: translateX(0%);
+        }
+        34%,
+        66% {
+          transform: translateX(-100%);
+        }
+        67%,
+        100% {
+          transform: translateX(-200%);
+        }
+      }
+      h1 {
+        margin-top: 1rem;
+        color: #203864;
+      }
+      p {
+        max-width: 700px;
+        line-height: 1.6;
+      }
+      /* Footer info */
+      footer {
+        font-size: 0.9rem;
+        text-align: center;
+      }
+      /* Secondary text-only nav at bottom */
+      .secondary-nav {
+        margin-top: 1rem;
+      }
+      .secondary-nav a {
+        color: #4a90e2;
+        text-decoration: none;
+        margin: 0 0.6rem;
+        font-size: 0.85rem;
+      }
+      .secondary-nav a:hover {
+        text-decoration: underline;
+      }
+      /* Link color variations */
+      a {
+        color: #0b5394;
+      }
+      a:visited {
+        color: #734d26;
+      }
+      a:hover {
+        color: #d35400;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div><strong>Grishma Adhikari</strong></div>
+        <ul>
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="slider" aria-label="Featured images">
+        <div class="slides">
+          <img src="images/banner1.jpg" alt="Sunset over mountain range" />
+          <img src="images/banner2.jpg" alt="Ocean waves hitting shore" />
+          <img src="images/banner3.jpg" alt="City skyline at night" />
+        </div>
+      </section>
+
+      <section>
+        <h1>Welcome to My Personal Space</h1>
+        <p>
+          Hello! I’m Grishma Adhikari, a passionate explorer of ideas and
+          creativity. This site showcases some of my favorite projects, photos,
+          and thoughts. Feel free to browse around and learn more about me.
+        </p>
+        <p>
+          If you want to reach out or collaborate, head over to the Contact
+          page. I look forward to connecting with you!
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        © 2025 Grishma Adhikari | Email:
+        <a href="mailto:agrishma25@tbc.edu.np">agrishma25@tbc.edu.np</a>
+      </p>
+      <nav class="secondary-nav" aria-label="Secondary site navigation">
+        <a href="index.html">Home</a>| <a href="gallery.html">Gallery</a>|
+        <a href="about.html">About</a>| <a href="services.html">Services</a>|
+        <a href="contact.html">Contact</a>
+      </nav>
+    </footer>
+  </body>
+</html>
